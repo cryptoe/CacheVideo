@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ViewController : UIViewController
+#import <MediaPlayer/MediaPlayer.h>
+@interface ViewController : UIViewController<UIWebViewDelegate,MPMediaPlayback>
+{
+    NSString *_fName;
+}
+@property (weak, nonatomic) IBOutlet UIProgressView *progressBar;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (nonatomic, strong)MPMoviePlayerController *player;
+@property (weak, nonatomic) IBOutlet UIView *DownloadView;
 
 @end
